@@ -16,6 +16,7 @@ function Voice() {
 
   useEffect(()=>{
     handleListen()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isListening])
 
   const handleListen = () => {
@@ -51,9 +52,9 @@ function Voice() {
 
   return (
     <>
-    <img id='bg' src='https://takenote.co/wp-content/uploads/2019/12/dissertation%20interview%20transcription%20guide%20to%20transcription%20services.jpg' />
-    <img id='bg-med' src='https://img.freepik.com/premium-photo/stack-books-with-headphones-tablets-wooden-background-concept-modern-technological-education-study-books_243391-991.jpg?w=2000' />
-    <img id='bg-sml' src='https://img.lovepik.com/background/20211101/medium/lovepik-indoor-study-mobile-phone-wallpaper-background-image_400618844.jpg' />
+    <img id='bg' src='https://takenote.co/wp-content/uploads/2019/12/dissertation%20interview%20transcription%20guide%20to%20transcription%20services.jpg' alt='img' />
+    <img id='bg-med' src='https://img.freepik.com/premium-photo/stack-books-with-headphones-tablets-wooden-background-concept-modern-technological-education-study-books_243391-991.jpg?w=2000' alt='img' />
+    <img id='bg-sml' src='https://img.lovepik.com/background/20211101/medium/lovepik-indoor-study-mobile-phone-wallpaper-background-image_400618844.jpg' alt='img' />
     <h1>Transcript</h1>
       <div className="container">
         <div className="box">
@@ -67,7 +68,7 @@ function Voice() {
           <p className='recordedNotes'>{note}</p>
         </div>
         <div className='box' id='trans-box'>
-          <h2 id='notes'>Transcripted</h2>
+          <h2 id='notes'>Transcript</h2>
           {savedNotes.map(n => (<p key={n} className='recordedNotes'>{n}</p>))}
         </div>
       </div>
